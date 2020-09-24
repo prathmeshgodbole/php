@@ -20,6 +20,11 @@ $y=5;
 $p=100;
 $q=200;
 
+
+//Constant
+define('NAME','Mark');
+
+
 //We can not access variables which is declared outside function into Inside Function.
 function variable(){
     echo "<br> My name : $name Mobile number is : $mobile Marks : $marks";
@@ -74,6 +79,11 @@ function myTest() {
   myTest();
   echo"<br>";
   myTest();
+
+
+
+//Constant
+echo "<br><br>" . NAME . "<br>"; 
 
 ?>
 
