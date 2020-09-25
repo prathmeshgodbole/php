@@ -34,7 +34,7 @@ $students=[
 <?php 
 
 //for loop
-  for($i=0; $i < count($cars); $i++){
+  for($i=0; $i < count(); $i++){
     echo $cars[$i]."<br />";
   }
 
