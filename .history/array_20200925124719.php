@@ -9,10 +9,6 @@ $planes= ["AirIndia"=>"50","Kingfisher"=>"100","JetAirways"=>"150"];
 $planes_length=count($planes);
 
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
