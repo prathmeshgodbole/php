@@ -15,12 +15,12 @@
 //     }
 
 
-//XSS Method
-if(isset($_POST['submit'])){
-    echo htmlspecialchars($_POST['email']);
-    echo  htmlspecialchars($_POST['title']);
-    echo  htmlspecialchars($_POST['ingredients']);
-    }
+//POST Method
+// if(isset($_POST['submit'])){
+//     echo $_POST['email'];
+//     echo $_POST['title'];
+//     echo $_POST['ingredients'];
+//     }
 
 ?>
 
