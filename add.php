@@ -14,7 +14,6 @@
 //     echo $_POST['ingredients'];
 //     }
 
-
 //XSS Method
 // if(isset($_POST['submit'])){
 //     echo htmlspecialchars($_POST['email']);
@@ -23,33 +22,76 @@
 //     }
 
 
-///POST FORM Validation
+
+//POST FORM Validation
+// if(isset($_POST['submit'])){
+    
+// //for email
+// if(empty($_POST['email'])){
+//     echo "<br>Enter Mail-ID :";
+// }else{
+//     echo"<br>";
+//     echo htmlspecialchars($_POST['email']);
+// }
+
+// //for name
+// if(empty($_POST['title'])){
+//     echo "<br>Enter title :";
+// }else{
+//     echo"<br>";
+//     echo htmlspecialchars($_POST['title']);
+// }
+
+// //for ingredients
+// if(empty($_POST['ingredients'])){
+//     echo "<br>Enter Atlist 1 Ingredient :";
+// }else{
+//     echo"<br>";
+//     echo htmlspecialchars($_POST['ingredients']);
+// }
+// }
+
+
+//FORM mail_name_ingredients Validation 
 if(isset($_POST['submit'])){
     
-    //for email
-    if(empty($_POST['email'])){
-        echo "<br>Enter Mail-ID :";
-    }else{
-        echo"<br>";
-        echo htmlspecialchars($_POST['email']);
+//for email
+if(empty($_POST['email'])){
+    echo "<br>Enter Mail-ID :";
+}else{
+    echo"<br>";
+    $email=$_POST['email'];
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+echo"<br>Email must be VALIDE !!";
     }
-    
-    //for name
-    if(empty($_POST['title'])){
-        echo "<br>Enter title :";
-    }else{
-        echo"<br>";
-        echo htmlspecialchars($_POST['title']);
-    }
-    
-    //for ingredients
-    if(empty($_POST['ingredients'])){
-        echo "<br>Enter Atlist 1 Ingredient :";
-    }else{
-        echo"<br>";
-        echo htmlspecialchars($_POST['ingredients']);
-    }
-    }
+}
+
+
+//for name
+if(empty($_POST['title'])){
+    echo "<br>Enter title :";
+}else{
+echo "<br>";
+$title=$_POST['title'];
+if(!preg_match("/^[a-zA-Z\s]+$/",$title)){
+echo"<br>Please Enter Correct Title :";
+}
+}
+
+
+//for ingredients
+if(empty($_POST['ingredients'])){
+    echo "<br>Enter Atlist 1 Ingredient :";
+}
+else{
+    echo "<br>";
+$ingredients=$_POST['ingredients'];
+if(!preg_match("/^[a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/",$ingredients)){
+echo"<br>Ingredients must be comma seprated value :";
+}
+}
+
+}
 
 //end of POST form validation
 
@@ -76,6 +118,5 @@ if(isset($_POST['submit'])){
 </section>
 
 <?php include('template/footer.php');?>
-
 
 </html>
