@@ -22,8 +22,8 @@
 //     echo  htmlspecialchars($_POST['ingredients']);
 //     }
 
-
 ///POST FORM Validation
+
 if(isset($_POST['submit'])){
     
     //for email

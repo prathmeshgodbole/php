@@ -23,35 +23,6 @@
 //     }
 
 
-///POST FORM Validation
-if(isset($_POST['submit'])){
-    
-    //for email
-    if(empty($_POST['email'])){
-        echo "<br>Enter Mail-ID :";
-    }else{
-        echo"<br>";
-        echo htmlspecialchars($_POST['email']);
-    }
-    
-    //for name
-    if(empty($_POST['title'])){
-        echo "<br>Enter title :";
-    }else{
-        echo"<br>";
-        echo htmlspecialchars($_POST['title']);
-    }
-    
-    //for ingredients
-    if(empty($_POST['ingredients'])){
-        echo "<br>Enter Atlist 1 Ingredient :";
-    }else{
-        echo"<br>";
-        echo htmlspecialchars($_POST['ingredients']);
-    }
-    }
-
-//end of POST form validation
 
 ?>
 
