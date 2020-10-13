@@ -136,7 +136,6 @@ if(!preg_match("/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/",$ingredients)){
     $errors['ingredients'] = "<br>Ingredients must be comma seprated value :";
 }
 }
-
 //Redirect 
 if(array_filter($errors)){
     // echo 'Form has some errors : ';
